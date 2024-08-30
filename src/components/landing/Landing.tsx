@@ -2,20 +2,17 @@
 // App.tsx
 
 import { audio } from '@/App';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
 import AudioStateContainer from '@/container/AudioStateContainer';
 import { createMediaTrack } from '@/helpers/common';
 import { AudioState } from 'audio_x';
-import { Search } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import song from '../../assets/song.json';
 import { MoodGraphSection } from './MoodGraphSection';
+import { Playlist } from './Playlist';
 import { QuickActions } from './QuickActions';
 import { RightSidebar } from './RightSideBar';
 import { MoodHistory, Song } from './types';
 import { WeeklyTrends } from './WeeklyTrend';
-import { Playlist } from './Playlist';
 
 const sampleLyrics = `[Verse 1]
 Lyrics of the song go here...
@@ -175,7 +172,7 @@ const SongRecommendationApp: React.FC = () => {
       </main>
 
       {/* Right Sidebar */}
-      <div className='fixed top-0 bottom-0 right-0 overflow-y-auto w-80 bg-zinc-900 opacity-75'>
+      <div className='fixed top-0 bottom-0 right-0 overflow-y-auto w-80 bg-zinc-900'>
         <AudioStateContainer
           renderItem={(audioState: AudioState) => (
             <RightSidebar
