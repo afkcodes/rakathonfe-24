@@ -158,7 +158,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_HAPPY]}
                 fill={moodColorMap[MOOD_HAPPY]}
-                fillOpacity={0.8}
+                fillOpacity={0.9}
               />
               <Area
                 type='monotone'
@@ -166,7 +166,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_SAD]}
                 fill={moodColorMap[MOOD_SAD]}
-                fillOpacity={0.8}
+                fillOpacity={0.9}
               />
               <Area
                 type='monotone'
@@ -174,7 +174,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_ENERGETIC]}
                 fill={moodColorMap[MOOD_ENERGETIC]}
-                fillOpacity={0.8}
+                fillOpacity={0.9}
               />
               <Area
                 type='monotone'
@@ -182,7 +182,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_RELAX]}
                 fill={moodColorMap[MOOD_RELAX]}
-                fillOpacity={0.8}
+                fillOpacity={0.9}
               />
               <Area
                 type='monotone'
@@ -190,7 +190,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_ANGRY]}
                 fill={moodColorMap[MOOD_ANGRY]}
-                fillOpacity={0.8}
+                fillOpacity={0.9}
               />
             </AreaChart>
           </ResponsiveContainer>
