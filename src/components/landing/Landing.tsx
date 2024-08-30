@@ -1,14 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // App.tsx
 
+import { audio } from '@/App';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Rewind, Search } from 'lucide-react';
+import AudioStateContainer from '@/container/AudioStateContainer';
+import { createMediaTrack } from '@/helpers/common';
+import { AudioState } from 'audio_x';
+import { Search } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import song from '../../assets/song.json';
 import { MoodGraphSection } from './MoodGraphSection';
-import { Player } from './Player';
-import { Playlist } from './Playlist';
 import { QuickActions } from './QuickActions';
+import { RightSidebar } from './RightSideBar';
 import { MoodHistory, Song } from './types';
 import { WeeklyTrends } from './WeeklyTrend';
 
@@ -82,46 +86,110 @@ const SongRecommendationApp: React.FC = () => {
     { id: '3', title: 'Calm Waters', artist: 'Serene Sounds' },
   ];
 
-  return (
-    <div className='min-h-screen bg-zinc-950 text-zinc-100 pb-36'>
-      {/* Header with Search */}
-      <header className='sticky top-0 z-20 p-4 shadow-md shadow-lg bg-zinc-900'>
-        <div className='flex items-center justify-between mx-auto max-w-7xl'>
-          <div className='flex items-center space-x-2'>
-            <Rewind fill='#D64664' strokeWidth={0} size={30} />
-            <h1 className='text-2xl font-bold text-zinc-100'>ReAudio</h1>
-          </div>
-          <div className='flex items-center space-x-4'>
-            <Input
-              type='text'
-              placeholder='Search for a song...'
-              className='w-64 bg-zinc-800 text-zinc-100 border-zinc-700'
-            />
-            <Button size='icon' variant='outline'>
-              <Search className='w-4 h-4' />
-            </Button>
-          </div>
-        </div>
-      </header>
+  const onPlay = (item: any) => {
+    audio.addMediaAndPlay(createMediaTrack(item, '320kbps'));
+  };
 
-      <main className='p-6 mx-auto max-w-7xl'>
+  return (
+    // <div className='min-h-screen bg-zinc-950 text-zinc-100 pb-36'>
+    //   {/* Header with Search */}
+    //   <header className='sticky top-0 z-20 p-4 shadow-lg bg-zinc-900'>
+    //     <div className='flex items-center justify-between mx-auto max-w-7xl'>
+    //       <div className='flex items-center space-x-2'>
+    //         <Rewind fill='#D64664' strokeWidth={0} size={30} />
+    //         <h1 className='text-2xl font-bold text-zinc-100'>ReAudio</h1>
+    //       </div>
+    //       <div className='flex items-center space-x-4'>
+    //         <Input
+    //           type='text'
+    //           placeholder='Search for a song...'
+    //           className='w-64 bg-zinc-800 text-zinc-100 border-zinc-700'
+    //         />
+    //         <Button size='icon' variant='outline'>
+    //           <Search className='w-4 h-4' />
+    //         </Button>
+    //       </div>
+    //     </div>
+    //   </header>
+
+    //   <main className='p-6 mx-auto max-w-7xl'>
+    //     <div className='grid grid-cols-3 gap-6 mb-6'>
+    //       <WeeklyTrends />
+    //       {/* <Recommendations songs={recommendedSongs} /> */}
+    //       <QuickActions />
+    //     </div>
+
+    //     <MoodGraphSection moodHistory={moodHistory} />
+    //     <TabSections
+    //       lyrics={sampleLyrics}
+    //       similarSongs={recommendedSongs}
+    //       complementarySongs={complementarySongs}
+    //     />
+    //     <div className='col-span-1 mt-4'>
+    //       <Playlist songs={song.data} onPlaySong={handlePlaySong} />
+    //     </div>
+    //   </main>
+    //   <AudioStateContainer
+    //     renderItem={(audioState) => (
+    //       <Player
+    //         isPlaying={isPlaying}
+    //         onPlayPause={() => {
+    //           onPlay(song.data[0]);
+    //         }}
+    //         currentSong={song.data[0]}
+    //         audioState={audioState}
+    //       />
+    //     )}
+    //   />
+    // </div>
+    <div className='flex min-h-screen bg-zinc-950 text-zinc-100'>
+      {/* Main Content */}
+      <main className='flex-grow p-6 overflow-y-auto' style={{ marginRight: '320px' }}>
+        {/* Header with Search */}
+        <header className='mb-6'>
+          <div className='flex items-center justify-between'>
+            <h1 className='text-2xl font-bold text-zinc-100'>Mood Music</h1>
+            <div className='flex items-center space-x-4'>
+              <Input
+                type='text'
+                placeholder='Search for a song...'
+                className='w-64 bg-zinc-800 text-zinc-100 border-zinc-700'
+              />
+              <Button size='icon' variant='outline'>
+                <Search className='w-4 h-4' />
+              </Button>
+            </div>
+          </div>
+        </header>
+
+        <MoodGraphSection moodHistory={moodHistory} />
+
         <div className='grid grid-cols-3 gap-6 mb-6'>
           <WeeklyTrends />
           {/* <Recommendations songs={recommendedSongs} /> */}
           <QuickActions />
         </div>
 
-        <MoodGraphSection moodHistory={moodHistory} />
-        {/* <SongDetails
-          lyrics={sampleLyrics}
-          similarSongs={recommendedSongs}
-          complementarySongs={complementarySongs}
-        /> */}
-        <div className='col-span-1 mt-4'>
-          <Playlist songs={song.data} onPlaySong={handlePlaySong} />
-        </div>
+        {/* <Playlist songs={playlistSongs} onPlaySong={handlePlaySong} /> */}
       </main>
-      <Player isPlaying={isPlaying} onPlayPause={() => setIsPlaying(!isPlaying)} />
+
+      {/* Right Sidebar */}
+      <div className='fixed top-0 bottom-0 right-0 overflow-y-auto w-80 bg-zinc-900'>
+        <AudioStateContainer
+          renderItem={(audioState: AudioState) => (
+            <RightSidebar
+              currentSong={song.data[0]}
+              isPlaying={isPlaying}
+              onPlayPause={() => {
+                onPlay(song.data[0]);
+              }}
+              currentMood={moodHistory[moodHistory.length - 1]}
+              lyrics={sampleLyrics}
+              audioState={audioState}
+            />
+          )}
+        />
+      </div>
     </div>
   );
 };

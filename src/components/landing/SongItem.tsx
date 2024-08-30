@@ -1,5 +1,6 @@
 // components/SongItem.tsx
 
+import { EMOTIONS } from '@/constants/constants';
 import { timeToReadable } from '@/helpers/common';
 import React from 'react';
 import { Song } from './types';
@@ -21,8 +22,19 @@ export const SongItem: React.FC<SongItemProps> = ({ song, onPlay }) => {
           <p className='text-sm text-zinc-400'>{song.subtitle}</p>
         </div>
       </div>
-      <div>
-        <p className='pr-2 text-background'>{timeToReadable(Number(song.duration))}</p>
+      <div className='flex space-x-4'>
+        <div className='flex space-x-2'>
+          {song.emotions.map((emote: string) => (
+            <div
+              style={{ border: `1px ${EMOTIONS[emote]} solid` }}
+              className='flex items-center justify-center py-1 px-2 font-medium bg-gray-800 rounded-full text-[10px]'>
+              <p style={{ color: EMOTIONS[emote] }}>{emote.toUpperCase()}</p>
+            </div>
+          ))}
+        </div>
+        <div>
+          <p className='pr-1 text-background'>{timeToReadable(Number(song.duration))}</p>
+        </div>
       </div>
     </div>
   );
