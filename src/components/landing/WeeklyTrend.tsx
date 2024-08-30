@@ -13,7 +13,7 @@ import {
   YAxis,
 } from 'recharts';
 
-import { MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD, moodColorMap } from '../../common.constants';
+import { MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD, moodColorMap } from '../../constants/common.constants';
 const weeklyData = [
   { name: 'Mon', [MOOD_HAPPY]: 4, [MOOD_SAD]: 2, [MOOD_ENERGETIC]: 3, [MOOD_RELAX]: 1, [MOOD_ANGRY]: 2 },
   { name: 'Tue', [MOOD_HAPPY]: 3, [MOOD_SAD]: 1, [MOOD_ENERGETIC]: 4, [MOOD_RELAX]: 2, [MOOD_ANGRY]: 1 },

@@ -15,6 +15,7 @@ import { QuickActions } from './QuickActions';
 import { RightSidebar } from './RightSideBar';
 import { MoodHistory, Song } from './types';
 import { WeeklyTrends } from './WeeklyTrend';
+import { Playlist } from './Playlist';
 
 const sampleLyrics = `[Verse 1]
 Lyrics of the song go here...
@@ -149,7 +150,7 @@ const SongRecommendationApp: React.FC = () => {
         <header className='mb-6'>
           <div className='flex items-center justify-between'>
             <h1 className='text-2xl font-bold text-zinc-100'>Mood Music</h1>
-            <div className='flex items-center space-x-4'>
+            {/* <div className='flex items-center space-x-4'>
               <Input
                 type='text'
                 placeholder='Search for a song...'
@@ -158,7 +159,7 @@ const SongRecommendationApp: React.FC = () => {
               <Button size='icon' variant='outline'>
                 <Search className='w-4 h-4' />
               </Button>
-            </div>
+            </div> */}
           </div>
         </header>
 
@@ -170,11 +171,11 @@ const SongRecommendationApp: React.FC = () => {
           <QuickActions />
         </div>
 
-        {/* <Playlist songs={playlistSongs} onPlaySong={handlePlaySong} /> */}
+        <Playlist songs={song.data} onPlaySong={handlePlaySong} />
       </main>
 
       {/* Right Sidebar */}
-      <div className='fixed top-0 bottom-0 right-0 overflow-y-auto w-80 bg-zinc-900'>
+      <div className='fixed top-0 bottom-0 right-0 overflow-y-auto w-80 bg-zinc-900 opacity-75'>
         <AudioStateContainer
           renderItem={(audioState: AudioState) => (
             <RightSidebar

@@ -98,7 +98,7 @@ import {
 
 import { MoodHistory } from './types';
 import BubbleChart from './MoodBubbleChart'
-import { MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD, moodColorMap } from '../../common.constants';
+import { MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD, moodColorMap } from '../../constants/common.constants';
 
 
 interface MoodGraphSectionProps {
@@ -158,7 +158,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_HAPPY]}
                 fill={moodColorMap[MOOD_HAPPY]}
-                fillOpacity={0.75}
+                fillOpacity={0.8}
               />
               <Area
                 type='monotone'
@@ -166,7 +166,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_SAD]}
                 fill={moodColorMap[MOOD_SAD]}
-                fillOpacity={0.75}
+                fillOpacity={0.8}
               />
               <Area
                 type='monotone'
@@ -174,7 +174,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_ENERGETIC]}
                 fill={moodColorMap[MOOD_ENERGETIC]}
-                fillOpacity={0.75}
+                fillOpacity={0.8}
               />
               <Area
                 type='monotone'
@@ -182,7 +182,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_RELAX]}
                 fill={moodColorMap[MOOD_RELAX]}
-                fillOpacity={0.75}
+                fillOpacity={0.8}
               />
               <Area
                 type='monotone'
@@ -190,7 +190,7 @@ export const MoodGraphSection: React.FC<MoodGraphSectionProps> = ({ moodHistory 
                 stackId='1'
                 stroke={moodColorMap[MOOD_ANGRY]}
                 fill={moodColorMap[MOOD_ANGRY]}
-                fillOpacity={0.75}
+                fillOpacity={0.8}
               />
             </AreaChart>
           </ResponsiveContainer>

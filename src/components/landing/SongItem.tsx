@@ -1,6 +1,6 @@
 // components/SongItem.tsx
 
-import { EMOTIONS } from '@/constants/constants';
+import { moodColorMap } from '@/constants/common.constants';
 import { timeToReadable } from '@/helpers/common';
 import React from 'react';
 import { Song } from './types';
@@ -26,9 +26,9 @@ export const SongItem: React.FC<SongItemProps> = ({ song, onPlay }) => {
         <div className='flex space-x-2'>
           {song.emotions.map((emote: string) => (
             <div
-              style={{ border: `1px ${EMOTIONS[emote]} solid` }}
+              style={{ border: `1px ${moodColorMap[emote as keyof typeof moodColorMap]} solid` }}
               className='flex items-center justify-center py-1 px-2 font-medium bg-gray-800 rounded-full text-[10px]'>
-              <p style={{ color: EMOTIONS[emote] }}>{emote.toUpperCase()}</p>
+              <p style={{ color: moodColorMap[emote as keyof typeof moodColorMap] }}>{emote.toUpperCase()}</p>
             </div>
           ))}
         </div>

@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import {MOOD_ANGRY,MOOD_HAPPY,MOOD_RELAX,MOOD_ENERGETIC,MOOD_SAD} from '../../constants/common.constants';
 export interface Song {
   id: string;
   title: string;
@@ -10,10 +11,11 @@ export interface Song {
 }
 
 export interface Mood {
-  Happy: number;
-  Sad: number;
-  Energetic: number;
-  Calm: number;
+  [MOOD_HAPPY]: number;
+  [MOOD_ANGRY]: number;
+  [MOOD_ENERGETIC]: number;
+  [MOOD_SAD]: number;
+  [MOOD_RELAX]: number;
 }
 
 export interface MoodHistoryItem extends Mood {

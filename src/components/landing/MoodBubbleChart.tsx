@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { moodColorMap, MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD } from '../../common.constants';
+import { moodColorMap, MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD } from '../../constants/common.constants';
 import { Key } from 'lucide-react';
 
 
@@ -23,11 +23,11 @@ const BubbleChart: React.FC<PropsInterface> = ({ data }) => {
 
 
   const [moodData, setMoodData] = useState<MoodData[]>([
-    { mood: 'Happy', value: 20, color: '#FFD700' },
-    { mood: 'Energetic', value: 20, color: '#FF4500' },
-    { mood: 'Relaxed', value: 20, color: '#00CED1' },
-    { mood: 'Calm', value: 20, color: '#1E90FF' },
-    { mood: 'Excited', value: 20, color: '#FF1493' },
+    { mood: MOOD_HAPPY, value: 20, color: moodColorMap[MOOD_HAPPY] },
+    { mood: MOOD_ENERGETIC, value: 20, color: moodColorMap[MOOD_ENERGETIC] },
+    { mood: MOOD_RELAX, value: 20, color: moodColorMap[MOOD_RELAX] },
+    { mood: MOOD_SAD, value: 20, color: moodColorMap[MOOD_SAD] },
+    { mood: MOOD_ANGRY, value: 20, color: moodColorMap[MOOD_ANGRY] },
   ]);
 
   const svgWidth = 550;
