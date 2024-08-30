@@ -6,6 +6,7 @@ export interface Song {
   year: string;
   images: any[];
   duration: string;
+  emotions: string[];
 }
 
 export interface Mood {

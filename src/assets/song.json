@@ -1,201 +1,142 @@
 {
   "data": [
     {
-      "id": "yDeAS8Eh",
-      "title": "Bones",
-      "subtitle": "Imagine Dragons - Bones",
+      "id": "9I1RBhKv",
+      "title": "Baatein Ye Kabhi Na (Male)",
+      "subtitle": "Jeet Gannguli, Arijit Singh - Khamoshiyan (Original Motion Picture Soundtrack)",
       "images": [
         {
           "quality": "50x50",
-          "link": "https://c.saavncdn.com/038/Bones-English-2022-20220311113603-50x50.jpg"
+          "link": "https://c.saavncdn.com/378/Khamoshiyan-Hindi-2014-20190516123124-50x50.jpg"
         },
         {
           "quality": "150x150",
-          "link": "https://c.saavncdn.com/038/Bones-English-2022-20220311113603-150x150.jpg"
+          "link": "https://c.saavncdn.com/378/Khamoshiyan-Hindi-2014-20190516123124-150x150.jpg"
         },
         {
           "quality": "500x500",
-          "link": "https://c.saavncdn.com/038/Bones-English-2022-20220311113603-500x500.jpg"
+          "link": "https://c.saavncdn.com/378/Khamoshiyan-Hindi-2014-20190516123124-500x500.jpg"
         }
       ],
-      "language": "english",
-      "year": "2022",
+      "emotions": ["Sad", "Melancholic"],
+      "language": "hindi",
+      "year": "2014",
       "type": "song",
       "isExplicit": "0",
-      "playCount": "18364013",
-      "music": "Dan Reynolds, Wayne Sermon, Ben Mckee, Daniel Platzman, Robin Fredriksson, Mattias Larsson",
-      "album": "Bones",
-      "albumId": "33436571",
-      "label": "KIDinaKORNER/Interscope Records",
+      "playCount": "39124608",
+      "music": "Jeet Gannguli",
+      "album": "Khamoshiyan (Original Motion Picture Soundtrack)",
+      "albumId": "1212987",
+      "label": "Sony Music Entertainment India Pvt. Ltd.",
       "mediaUrls": [
         {
           "quality": "12kbps",
-          "link": "https://aac.saavncdn.com/038/c4264a7fa9010487ee0857403925e5f8_12.mp4"
+          "link": "https://aac.saavncdn.com/378/dd5ad16c022c7883435c07ebada42ead_12.mp4"
         },
         {
           "quality": "48kbps",
-          "link": "https://aac.saavncdn.com/038/c4264a7fa9010487ee0857403925e5f8_48.mp4"
+          "link": "https://aac.saavncdn.com/378/dd5ad16c022c7883435c07ebada42ead_48.mp4"
         },
         {
           "quality": "96kbps",
-          "link": "https://aac.saavncdn.com/038/c4264a7fa9010487ee0857403925e5f8_96.mp4"
+          "link": "https://aac.saavncdn.com/378/dd5ad16c022c7883435c07ebada42ead_96.mp4"
         },
         {
           "quality": "160kbps",
-          "link": "https://aac.saavncdn.com/038/c4264a7fa9010487ee0857403925e5f8_160.mp4"
+          "link": "https://aac.saavncdn.com/378/dd5ad16c022c7883435c07ebada42ead_160.mp4"
         },
         {
           "quality": "320kbps",
-          "link": "https://aac.saavncdn.com/038/c4264a7fa9010487ee0857403925e5f8_320.mp4"
+          "link": "https://aac.saavncdn.com/378/dd5ad16c022c7883435c07ebada42ead_320.mp4"
         }
       ],
-      "duration": "165",
-      "copyright": "℗ 2022 KIDinaKORNER/Interscope Records",
-      "release_date": "2022-03-11",
+      "duration": "289",
+      "copyright": "(P) 2014 Sony Music Entertainment India Pvt. Ltd.",
+      "release_date": "2014-12-09",
       "hasLyrics": "false",
       "artists": [
         {
-          "name": "Dan Reynolds",
-          "id": "599453",
+          "name": "Jeet Gannguli",
+          "id": "464912",
           "image": [
             {
               "quality": "50x50",
-              "link": "https://c.saavncdn.com/048/Skipping-Stones-English-2018-20180620230710-50x50.jpg"
+              "link": "https://c.saavncdn.com/artists/Jeet_Gannguli_003_20231227073048_50x50.jpg"
             },
             {
               "quality": "150x150",
-              "link": "https://c.saavncdn.com/048/Skipping-Stones-English-2018-20180620230710-150x150.jpg"
+              "link": "https://c.saavncdn.com/artists/Jeet_Gannguli_003_20231227073048_150x150.jpg"
             },
             {
               "quality": "500x500",
-              "link": "https://c.saavncdn.com/048/Skipping-Stones-English-2018-20180620230710-500x500.jpg"
-            }
-          ],
-          "type": "artist"
-        },
-        { "name": "Wayne Sermon", "id": "599454", "image": "", "type": "artist" },
-        { "name": "Ben Mckee", "id": "599455", "image": "", "type": "artist" },
-        {
-          "name": "Daniel Platzman",
-          "id": "914898",
-          "image": [
-            {
-              "quality": "50x50",
-              "link": "https://c.saavncdn.com/883/Best-F-r-iends-Original-Motion-Picture-Soundtrack-English-2019-20190128215540-50x50.jpg"
-            },
-            {
-              "quality": "150x150",
-              "link": "https://c.saavncdn.com/883/Best-F-r-iends-Original-Motion-Picture-Soundtrack-English-2019-20190128215540-150x150.jpg"
-            },
-            {
-              "quality": "500x500",
-              "link": "https://c.saavncdn.com/883/Best-F-r-iends-Original-Motion-Picture-Soundtrack-English-2019-20190128215540-500x500.jpg"
-            }
-          ],
-          "type": "artist"
-        },
-        { "name": "Robin Fredriksson", "id": "683491", "image": "", "type": "artist" },
-        {
-          "name": "Mattias Larsson",
-          "id": "634862",
-          "image": [
-            {
-              "quality": "50x50",
-              "link": "https://c.saavncdn.com/277/Kom-Swedish-2017-20171009155644-50x50.jpg"
-            },
-            {
-              "quality": "150x150",
-              "link": "https://c.saavncdn.com/277/Kom-Swedish-2017-20171009155644-150x150.jpg"
-            },
-            {
-              "quality": "500x500",
-              "link": "https://c.saavncdn.com/277/Kom-Swedish-2017-20171009155644-500x500.jpg"
+              "link": "https://c.saavncdn.com/artists/Jeet_Gannguli_003_20231227073048_500x500.jpg"
             }
           ],
           "type": "artist"
         },
         {
-          "name": "Imagine Dragons",
-          "id": "599452",
+          "name": "Jeet Gannguli",
+          "id": "464912",
           "image": [
             {
               "quality": "50x50",
-              "link": "https://c.saavncdn.com/artists/Imagine_Dragons_50x50.jpg"
+              "link": "https://c.saavncdn.com/artists/Jeet_Gannguli_003_20231227073048_50x50.jpg"
             },
             {
               "quality": "150x150",
-              "link": "https://c.saavncdn.com/artists/Imagine_Dragons_150x150.jpg"
+              "link": "https://c.saavncdn.com/artists/Jeet_Gannguli_003_20231227073048_150x150.jpg"
             },
             {
               "quality": "500x500",
-              "link": "https://c.saavncdn.com/artists/Imagine_Dragons_500x500.jpg"
+              "link": "https://c.saavncdn.com/artists/Jeet_Gannguli_003_20231227073048_500x500.jpg"
             }
           ],
           "type": "artist"
         },
         {
-          "name": "Dan Reynolds",
-          "id": "599453",
+          "name": "Arijit Singh",
+          "id": "459320",
           "image": [
             {
               "quality": "50x50",
-              "link": "https://c.saavncdn.com/048/Skipping-Stones-English-2018-20180620230710-50x50.jpg"
+              "link": "https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_50x50.jpg"
             },
             {
               "quality": "150x150",
-              "link": "https://c.saavncdn.com/048/Skipping-Stones-English-2018-20180620230710-150x150.jpg"
+              "link": "https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_150x150.jpg"
             },
             {
               "quality": "500x500",
-              "link": "https://c.saavncdn.com/048/Skipping-Stones-English-2018-20180620230710-500x500.jpg"
+              "link": "https://c.saavncdn.com/artists/Arijit_Singh_002_20230323062147_500x500.jpg"
             }
           ],
           "type": "artist"
         },
-        { "name": "Wayne Sermon", "id": "599454", "image": "", "type": "artist" },
-        { "name": "Ben Mckee", "id": "599455", "image": "", "type": "artist" },
         {
-          "name": "Daniel Platzman",
-          "id": "914898",
+          "name": "Sayeed Quadri",
+          "id": "669007",
           "image": [
             {
               "quality": "50x50",
-              "link": "https://c.saavncdn.com/883/Best-F-r-iends-Original-Motion-Picture-Soundtrack-English-2019-20190128215540-50x50.jpg"
+              "link": "https://c.saavncdn.com/artists/Sayeed_Quadri_001_20210616180918_50x50.jpg"
             },
             {
               "quality": "150x150",
-              "link": "https://c.saavncdn.com/883/Best-F-r-iends-Original-Motion-Picture-Soundtrack-English-2019-20190128215540-150x150.jpg"
+              "link": "https://c.saavncdn.com/artists/Sayeed_Quadri_001_20210616180918_150x150.jpg"
             },
             {
               "quality": "500x500",
-              "link": "https://c.saavncdn.com/883/Best-F-r-iends-Original-Motion-Picture-Soundtrack-English-2019-20190128215540-500x500.jpg"
+              "link": "https://c.saavncdn.com/artists/Sayeed_Quadri_001_20210616180918_500x500.jpg"
             }
           ],
           "type": "artist"
         },
-        { "name": "Robin Fredriksson", "id": "683491", "image": "", "type": "artist" },
-        {
-          "name": "Mattias Larsson",
-          "id": "634862",
-          "image": [
-            {
-              "quality": "50x50",
-              "link": "https://c.saavncdn.com/277/Kom-Swedish-2017-20171009155644-50x50.jpg"
-            },
-            {
-              "quality": "150x150",
-              "link": "https://c.saavncdn.com/277/Kom-Swedish-2017-20171009155644-150x150.jpg"
-            },
-            {
-              "quality": "500x500",
-              "link": "https://c.saavncdn.com/277/Kom-Swedish-2017-20171009155644-500x500.jpg"
-            }
-          ],
-          "type": "artist"
-        }
+        { "name": "Ali Fazal", "id": "460216", "image": "", "type": "artist" },
+        { "name": "Sapna Pabbi", "id": "773300", "image": "", "type": "artist" },
+        { "name": "Gurmeet Choudhary", "id": "773299", "image": "", "type": "artist" }
       ],
       "origin": "none",
-      "token": "CSwOcCcIcls",
+      "token": "SSFaYzZYfEU",
       "source": "saavn"
     }
   ],
