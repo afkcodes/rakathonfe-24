@@ -76,7 +76,7 @@ export const RightSidebar: React.FC<RightSidebarProps> = ({
             audio.seek(val[0]);
           }}
         />
-        <div className='flex justify-between text-[10px] text-zinc-400'>
+        <div className='flex justify-between text-[10px] text-zinc-400 mt-2'>
           <span>{timeToReadable(audioState.progress || 0)}</span>
           <span>{timeToReadable(audioState.duration || 0)}</span>
         </div>
