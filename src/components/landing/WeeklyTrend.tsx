@@ -13,13 +13,17 @@ import {
   YAxis,
 } from 'recharts';
 
+import { MOOD_ANGRY, MOOD_ENERGETIC, MOOD_HAPPY, MOOD_RELAX, MOOD_SAD, moodColorMap } from '../../constants/common.constants';
 const weeklyData = [
-  { name: 'Mon', Happy: 4, Sad: 2, Energetic: 3, Calm: 1 },
-  { name: 'Tue', Happy: 3, Sad: 1, Energetic: 4, Calm: 2 },
-  { name: 'Wed', Happy: 2, Sad: 3, Energetic: 2, Calm: 3 },
-  { name: 'Thu', Happy: 5, Sad: 1, Energetic: 4, Calm: 0 },
-  { name: 'Fri', Happy: 4, Sad: 2, Energetic: 5, Calm: 1 },
+  { name: 'Mon', [MOOD_HAPPY]: 4, [MOOD_SAD]: 2, [MOOD_ENERGETIC]: 3, [MOOD_RELAX]: 1, [MOOD_ANGRY]: 2 },
+  { name: 'Tue', [MOOD_HAPPY]: 3, [MOOD_SAD]: 1, [MOOD_ENERGETIC]: 4, [MOOD_RELAX]: 2, [MOOD_ANGRY]: 1 },
+  { name: 'Wed', [MOOD_HAPPY]: 2, [MOOD_SAD]: 3, [MOOD_ENERGETIC]: 2, [MOOD_RELAX]: 3, [MOOD_ANGRY]: 4 },
+  { name: 'Thu', [MOOD_HAPPY]: 5, [MOOD_SAD]: 1, [MOOD_ENERGETIC]: 4, [MOOD_RELAX]: 0, [MOOD_ANGRY]: 3 },
+  { name: 'Fri', [MOOD_HAPPY]: 4, [MOOD_SAD]: 2, [MOOD_ENERGETIC]: 5, [MOOD_RELAX]: 1, [MOOD_ANGRY]: 1 },
 ];
+
+
+const fillOpacity = 0.8
 
 export const WeeklyTrends: React.FC = () => (
   <Card className='bg-zinc-900 border-zinc-800'>
@@ -34,35 +38,43 @@ export const WeeklyTrends: React.FC = () => (
           <Legend />
           <Area
             type='monotone'
-            dataKey='Happy'
+            dataKey={MOOD_HAPPY}
             stackId='1'
-            stroke='#EAB308'
-            fill='#EAB308'
-            fillOpacity={0.6}
+            stroke={moodColorMap[MOOD_HAPPY]}
+            fill={moodColorMap[MOOD_HAPPY]}
+            fillOpacity={fillOpacity}
           />
           <Area
             type='monotone'
-            dataKey='Sad'
+            dataKey={MOOD_SAD}
             stackId='1'
-            stroke='#60A5FA'
-            fill='#60A5FA'
-            fillOpacity={0.6}
+            stroke={moodColorMap[MOOD_SAD]}
+            fill={moodColorMap[MOOD_SAD]}
+            fillOpacity={fillOpacity}
           />
           <Area
             type='monotone'
-            dataKey='Energetic'
+            dataKey={MOOD_ENERGETIC}
             stackId='1'
-            stroke='#F87171'
-            fill='#F87171'
-            fillOpacity={0.6}
+            stroke={moodColorMap[MOOD_ENERGETIC]}
+            fill={moodColorMap[MOOD_ENERGETIC]}
+            fillOpacity={fillOpacity}
           />
           <Area
             type='monotone'
-            dataKey='Calm'
+            dataKey={MOOD_RELAX}
             stackId='1'
-            stroke='#34D399'
-            fill='#34D399'
-            fillOpacity={0.6}
+            stroke={moodColorMap[MOOD_RELAX]}
+            fill={moodColorMap[MOOD_RELAX]}
+            fillOpacity={fillOpacity}
+          />
+           <Area
+            type='monotone'
+            dataKey={MOOD_ANGRY}
+            stackId='1'
+            stroke={moodColorMap[MOOD_ANGRY]}
+            fill={moodColorMap[MOOD_ANGRY]}
+            fillOpacity={fillOpacity}
           />
         </AreaChart>
       </ResponsiveContainer>
